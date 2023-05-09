@@ -1,0 +1,60 @@
+
+.row {
+  padding: 30px;
+}
+
+h1 {
+  text-align: center;
+  font-weight: var(--titles-weight);
+  font-family: var(--titles-font);
+}
+
+ul {
+  margin-top: 2rem;
+}
+
+li {
+  color: #4d6278;
+  margin-left: 8%;
+  width: var(--cards-width);
+  height: fit-content ;
+  list-style: none;
+  padding: 2rem;
+  padding-top: 1.5rem;
+  margin-bottom: 2.7rem;
+  background-color: #333d52;
+  border-radius: 10px;
+}
+
+.top-card-wr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%;
+  margin: auto;
+
+}
+
+.company,
+.title,
+.period {
+  color: var(--cards-letters-color);
+  font-family: var(--titles-font);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.title {
+  font-size: 1.8rem;
+}
+
+.description {
+  color: var(--cards-letters-color);
+  font-family: var(--text-font);
+  font-size: 1.25rem;
+  padding: 1rem;
+}
+
+.img-fluid {
+  border-radius: 10px;
+}

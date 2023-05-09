@@ -1,0 +1,43 @@
+
+#ap-logo {
+  width: 12rem;
+  margin-left: 2rem;
+}
+
+#gh-logo {
+  width: 4rem;
+  margin-right: 0.5rem;
+}
+
+#ln-logo {
+  width: 4rem;
+  margin-left: 1rem;
+  margin-right: 2rem;
+}
+
+.welcome-msg {
+  margin: 0;
+  font-family: 'Kanit', sans-serif;
+  font-size: 7rem;
+  font-weight: 700;
+  letter-spacing: 1rem;
+  user-select: none;
+  text-align: center;
+  background: url('../../../assets/SecureCoding.jpg');
+  background-size: auto 200%;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 8s linear infinite;
+}
+
+@keyframes shine {
+  from {
+    background-position: center 0;
+  }
+
+  to {
+    background-position: center 200%;
+  }
+}
