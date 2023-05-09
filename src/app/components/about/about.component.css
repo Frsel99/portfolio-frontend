@@ -1,0 +1,54 @@
+.row {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 500;
+  position: relative;
+  width: 100%;
+  height: 20vh;
+}
+
+.profile-pic {
+  position: absolute;
+  top: -5rem;
+  left: 17%;
+}
+
+.profile-pic > img {
+  object-fit: cover;
+  border-radius: 50%;
+  width: 15rem;
+  height: 15rem;
+}
+
+.personal-data-wr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 1.5rem;
+  left: 32%;
+  width: 45%;
+  font-weight: var(--titles-weight);
+  font-family: var(--titles-font);
+}
+
+.name {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+.title {
+  font-size: 1.5rem;
+}
+
+.description-wr {
+  position: absolute;
+  width: 45%;
+  bottom: 10%;
+  left: 32%;
+  font-family: var(--text-font);
+}
+
+.description {
+  font-size: 1.25rem;
+  font-weight: 400;
+}

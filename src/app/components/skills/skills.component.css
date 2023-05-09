@@ -1,0 +1,16 @@
+.skill-circle-wr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.skill-circle {
+  font-family: var(--titles-font);
+}
+
+h1 {
+  font-family: var(--titles-font);
+  text-align: center;
+  font-weight: 500;
+}
