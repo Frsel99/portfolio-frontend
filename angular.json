@@ -36,6 +36,10 @@
             ]
           },
           "configurations": {
+            "environments": {
+              "dev": "environments/environment.ts",
+              "prod": "environments/environment.prod.ts"
+            },
             "production": {
               "budgets": [
                 {
