@@ -2,6 +2,7 @@
 #ap-logo {
   width: 12rem;
   margin-left: 2rem;
+  margin-right: 4rem;
 }
 
 #gh-logo {
@@ -13,6 +14,17 @@
   width: 4rem;
   margin-left: 1rem;
   margin-right: 2rem;
+}
+
+.login-button {
+  color: black;
+  border: none;
+  padding-inline: 0.8rem;
+  padding-block: 0.25rem;
+  border-radius: 10px;
+  margin-right: 2rem;
+  font-family: var(--titles-font);
+  font-size: 1.5rem;
 }
 
 .welcome-msg {

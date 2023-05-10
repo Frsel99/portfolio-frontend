@@ -11,6 +11,9 @@ import { EducationComponent } from './components/education/education.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ProyectsComponent } from './components/proyects/proyects.component';
+import { HttpClientModule} from '@angular/common/http';
+import { HomeComponent } from './views/home/home.component';
+import { LoginComponent } from './views/login/login.component'
 
 @NgModule({
   declarations: [
@@ -21,11 +24,14 @@ import { ProyectsComponent } from './components/proyects/proyects.component';
     ExperienceComponent,
     EducationComponent,
     SkillsComponent,
-    ProyectsComponent
+    ProyectsComponent,
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     NgCircleProgressModule.forRoot({
       "radius": 130,
       "space": -10,
