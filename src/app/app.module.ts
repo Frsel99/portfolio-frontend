@@ -11,9 +11,11 @@ import { EducationComponent } from './components/education/education.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ProyectsComponent } from './components/proyects/proyects.component';
-import { HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './views/home/home.component';
 import { LoginComponent } from './views/login/login.component'
+import { FormsModule } from '@angular/forms';
+import { InterceptorProvider } from './services/interceptor';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,7 @@ import { LoginComponent } from './views/login/login.component'
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
     NgCircleProgressModule.forRoot({
       "radius": 130,
       "space": -10,
@@ -52,7 +55,7 @@ import { LoginComponent } from './views/login/login.component'
       "showSubtitle": false,
     })
   ],
-  providers: [],
+  providers: [InterceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
