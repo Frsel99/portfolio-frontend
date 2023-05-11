@@ -18,17 +18,13 @@ export class ExperienceComponent implements OnInit {
     job: string;
     period: string;
     description: string;
-    image: string;
     company: string;
-    isCurrentJob: boolean;
     personId: number;
   } = {
       job: "",
       period: "",
       description: "",
-      image: "qwe",
       company: "",
-      isCurrentJob: false,
       personId: 1
     };
 
@@ -68,7 +64,7 @@ export class ExperienceComponent implements OnInit {
   }
 
   editExperience(id: number | undefined) {
-    const experience = new Experience(this.form.job, this.form.period, this.form.description, this.form.image, this.form.company, this.form.isCurrentJob, this.form.personId)
+    const experience = new Experience(this.form.job, this.form.period, this.form.description, this.form.company, this.form.personId)
     experience.id = id;
     this.experienceService.update(experience).subscribe(data => {
       alert("Experiencia Actualizada");

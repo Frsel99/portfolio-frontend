@@ -14,15 +14,13 @@ export class CreateExperienceComponent {
   job!: string;
   period!: string;
   description!: string;
-  image: string = "qwe"; 
   company!: string;
-  isCurrentJob!: boolean;
   personId: number = 1;
 
-  constructor(private experienceService: ExperienceService, private tokenService: TokenService, private router: Router) { }
+  constructor(private experienceService: ExperienceService) { }
 
   createExperience() {
-    const experience = new Experience(this.job, this.period, this.description, this.image, this.company, this.isCurrentJob, this.personId)
+    const experience = new Experience(this.job, this.period, this.description, this.company, this.personId)
     this.experienceService.save(experience).subscribe(data => {
       alert("Experiencia Añadida");
       window.location.reload();
