@@ -1,0 +1,13 @@
+<form #f="ngForm" (ngSubmit)="createExperience()" novalidate>
+  <div class="card-wr">
+    <div class="top-card-wr">
+      <input class="company" name="company" [(ngModel)]="company" placeholder="Empresa" />
+      <input class="job" name="job" [(ngModel)]="job" placeholder="Puesto" />
+      <input class="period" name="url" [(ngModel)]="period" placeholder="Periodo" />
+    </div>
+    <textarea class="description" name="description" [(ngModel)]="description" placeholder="Descripcion"></textarea>
+    <div class="btn-wr">
+      <button type="submit" class="submit-button">Agregar</button>
+    </div>
+  </div>
+</form>

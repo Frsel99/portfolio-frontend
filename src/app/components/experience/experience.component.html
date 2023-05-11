@@ -1,33 +1,45 @@
 <div class="row">
   <div class="col-lg-11">
-    <h1>Experiencia Laboral</h1>
+    <h1>Experiencia Laboral
+      <button (click)="setAddMode()" class="addButton" *ngIf="isAdmin">
+        +
+      </button>
+    </h1>
+    <app-create-experience *ngIf="addMode"></app-create-experience>
+
     <ul>
-      <li>
-        <div class="top-card-wr">
-          <span class="company">(Empresa)</span>
-          <span class="title">(Titulo)</span>
-          <span class="period">(Periodo)</span>
-        </div>
-        <p class="description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas iaculis aliquam blandit. Aliquam sit amet vulputate lorem, id laoreet lorem. Integer vitae hendrerit ipsum, in ornare nibh. Duis congue, risus id viverra congue, dui mauris ultricies arcu, vitae venenatis magna nunc nec tellus. Suspendisse ut mi cursus, gravida lacus sollicitudin</p>
-      </li>
-      <li>
-        <div class="top-card-wr">
-          <span class="company">(Empresa)</span>
-          <span class="title">(Titulo)</span>
-          <span class="period">(Periodo)</span>
-        </div>
-        <p class="description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas iaculis aliquam blandit. Aliquam sit amet vulputate lorem, id laoreet lorem. Integer vitae hendrerit ipsum, in ornare nibh. Duis congue, risus id viverra congue, dui mauris ultricies arcu, vitae venenatis magna nunc nec tellus. Suspendisse ut mi cursus, gravida lacus sollicitudin, .</p>
-      </li>
-      <li>
-        <div class="top-card-wr">
-          <span class="company">(Empresa)</span>
-          <span class="title">(Titulo)</span>
-          <span class="period">(Periodo)</span>
-        </div>
-        <p class="description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas iaculis aliquam blandit. Aliquam sit amet vulputate lorem, id laoreet lorem. Integer vitae hendrerit ipsum, in ornare nibh. Duis congue, risus id viverra congue, dui mauris ultricies arcu, vitae venenatis magna nunc nec tellus. Suspendisse ut mi cursus, gravida lacus sollicitudin, .</p>
+      <li *ngFor="let exp of experiences">
+        <form #f="ngForm" *ngIf="exp.id === editId;else no_edit_block" (ngSubmit)="editExperience(exp.id)" novalidate>
+          <div class="top-card-wr">
+            <button (click)="cancelEditMode()" class="back-button">
+              <img src="../../../assets/noun-curved-left-arrow-191576.svg" class="edit-icon" />
+            </button>
+            <input class="edit-company" name="company" (change)="handleChange($event)" value="{{exp.company}}" />
+            <input class="edit-job" name="job" (change)="handleChange($event)" value="{{exp.job}}" />
+            <input class="edit-period" name="period" (change)="handleChange($event)" value="{{exp.period}}" />
+          </div>
+          <textarea class="edit-description" name="description"
+            (change)="handleChange($event)">{{exp.description}}</textarea>
+          <div class="btn-wr">
+            <button type="button" (click)="deleteExperience(exp.id)" class="delete-button">
+              <img src="../../../assets/noun-bomb-pixel-2651796.svg" class="edit-icon" />
+            </button>
+            <button type="submit" class="submit-button">
+              <img src="../../../assets/noun-floppy-disk-436102.svg" class="edit-icon" />
+            </button>
+          </div>
+        </form>
+        <ng-template #no_edit_block>
+          <div class="top-card-wr">
+            <span class="company">{{exp.company}}</span>
+            <span class="title">{{exp.job}}</span>
+            <span class="period"> {{exp.period}}</span>
+            <button (click)="setEditMode(exp.id, exp)" class="edit-button" *ngIf="isAdmin">
+              <img src="../../../assets/icons8-edit.svg" class="edit-icon" />
+            </button>
+          </div>
+          <p class="description">{{exp.description}}</p>
+        </ng-template>
       </li>
     </ul>
   </div>
