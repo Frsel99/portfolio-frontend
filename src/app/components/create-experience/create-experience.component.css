@@ -1,0 +1,68 @@
+.card-wr {
+  color: #4d6278;
+  margin-left: 10%;
+  width: calc(var(--cards-width) - 1.5rem);
+  height: fit-content;
+  list-style: none;
+  padding: 2rem;
+  padding-top: 1.5rem;
+  margin-bottom: 2.7rem;
+  background-color: #333d52;
+  border-radius: 10px;
+}
+
+.top-card-wr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%;
+  margin: auto;
+
+}
+
+.company,
+.job,
+.period {
+  color: black;
+  font-family: var(--titles-font);
+  font-size: 1.5rem;
+  font-weight: 500; 
+  padding-left: 1rem;
+  border: none;
+  border-radius: 2px;
+}
+
+.description {
+  color: black;
+  font-family: var(--text-font);
+  font-size: 1.25rem;
+  padding: 2rem;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  width: 100%;
+  border: none;
+  margin-top: 2rem;
+  border-radius: 2px;
+  resize: none;
+}
+
+.submit-button {
+  font-family: var(--titles-font);
+  background: none;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  border: none;
+  color: black;
+  padding: 1rem;
+  border-radius: 2px;
+  width: 15%;
+  background-color: white;
+}
+
+.btn-wr {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
