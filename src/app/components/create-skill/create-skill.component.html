@@ -1,0 +1,11 @@
+<form #f="ngForm" (ngSubmit)="createSkill()" novalidate>
+  <div class="card-wr">
+    <div class="top-card-wr">
+      <input class="skill" name="skill" [(ngModel)]="skill" placeholder="Habilidad" />
+      <input class="percentage" name="percentage" [(ngModel)]="percentage" placeholder="Porcentaje" />
+    </div>
+    <div class="btn-wr">
+      <button type="submit" class="submit-button">Agregar</button>
+    </div>
+  </div>
+</form>
