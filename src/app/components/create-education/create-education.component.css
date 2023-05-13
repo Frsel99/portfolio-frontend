@@ -1,6 +1,6 @@
 .card-wr {
   color: #4d6278;
-  margin-left: 10%;
+  margin-left: 18.5%;
   width: calc(var(--cards-width) - 1.5rem);
   height: fit-content;
   list-style: none;
@@ -21,8 +21,8 @@
 
 }
 
-.company,
-.job,
+.institution,
+.study,
 .period {
   color: black;
   font-family: var(--titles-font);

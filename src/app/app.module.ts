@@ -18,6 +18,8 @@ import { FormsModule } from '@angular/forms';
 import { InterceptorProvider } from './services/interceptor';
 import { CreateExperienceComponent } from './components/create-experience/create-experience.component';
 import { CreateSkillComponent } from './components/create-skill/create-skill.component';
+import { CreateEducationComponent } from './components/create-education/create-education.component';
+
 
 @NgModule({
   declarations: [
@@ -33,6 +35,7 @@ import { CreateSkillComponent } from './components/create-skill/create-skill.com
     LoginComponent,
     CreateExperienceComponent,
     CreateSkillComponent,
+    CreateEducationComponent,
   ],
   imports: [
     BrowserModule,

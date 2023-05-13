@@ -1,0 +1,13 @@
+<form #f="ngForm" (ngSubmit)="createEducation()" novalidate>
+  <div class="card-wr">
+    <div class="top-card-wr">
+      <input class="institution" name="institution" [(ngModel)]="institution" placeholder="Institucion" />
+      <input class="study" name="study" [(ngModel)]="study" placeholder="Estudio" />
+      <input class="period" name="url" [(ngModel)]="period" placeholder="Periodo" />
+    </div>
+    <textarea class="description" name="description" [(ngModel)]="description" placeholder="Descripcion"></textarea>
+    <div class="btn-wr">
+      <button type="submit" class="submit-button">Agregar</button>
+    </div>
+  </div>
+</form>

@@ -1,33 +1,45 @@
 <div class="row">
-  <div class="col-lg-11">
-    <h1>Educacion</h1>
+  <div class="col-lg-11 section-wr">
+    <h1>
+      <button (click)="setAddMode()" class="addButton" *ngIf="isAdmin">
+        +
+      </button>
+      Educacion
+    </h1>
+    <app-create-education *ngIf="addMode"></app-create-education>
     <ul>
-      <li>
-        <div class="top-card-wr">
-          <span class="company">(Institucion)</span>
-          <span class="title">(Titulo)</span>
-          <span class="period">(Periodo)</span>
-        </div>
-        <p class="description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas iaculis aliquam blandit. Aliquam sit amet vulputate lorem, id laoreet lorem. Integer vitae hendrerit ipsum, in ornare nibh. Duis congue, risus id viverra congue, dui mauris ultricies arcu, vitae venenatis magna nunc nec tellus. Suspendisse ut mi cursus, gravida lacus sollicitudin</p>
-      </li>
-      <li>
-        <div class="top-card-wr">
-          <span class="company">(Institucion)</span>
-          <span class="title">(Titulo)</span>
-          <span class="period">(Periodo)</span>
-        </div>
-        <p class="description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas iaculis aliquam blandit. Aliquam sit amet vulputate lorem, id laoreet lorem. Integer vitae hendrerit ipsum, in ornare nibh. Duis congue, risus id viverra congue, dui mauris ultricies arcu, vitae venenatis magna nunc nec tellus. Suspendisse ut mi cursus, gravida lacus sollicitudin, .</p>
-      </li>
-      <li>
-        <div class="top-card-wr">
-          <span class="company">(Institucion)</span>
-          <span class="title">(Titulo)</span>
-          <span class="period">(Periodo)</span>
-        </div>
-        <p class="description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas iaculis aliquam blandit. Aliquam sit amet vulputate lorem, id laoreet lorem. Integer vitae hendrerit ipsum, in ornare nibh. Duis congue, risus id viverra congue, dui mauris ultricies arcu, vitae venenatis magna nunc nec tellus. Suspendisse ut mi cursus, gravida lacus sollicitudin, .</p>
+      <li *ngFor="let education of educations">
+        <form #f="ngForm" *ngIf="education.id === editId;else no_edit_block" (ngSubmit)="editEducation(education.id)" novalidate>
+          <div class="top-card-wr">
+            <button (click)="cancelEditMode()" class="back-button">
+              <img src="../../../assets/noun-curved-left-arrow-191576.svg" class="edit-icon" />
+            </button>
+            <input class="edit-institution" name="institution" (change)="handleChange($event)" value="{{education.institution}}" />
+            <input class="edit-study" name="study" (change)="handleChange($event)" value="{{education.study}}" />
+            <input class="edit-period" name="period" (change)="handleChange($event)" value="{{education.period}}" />
+          </div>
+          <textarea class="edit-description" name="description"
+            (change)="handleChange($event)">{{education.description}}</textarea>
+          <div class="btn-wr">
+            <button type="button" (click)="deleteEducation(education.id)" class="delete-button">
+              <img src="../../../assets/noun-bomb-pixel-2651796.svg" class="edit-icon" />
+            </button>
+            <button type="submit" class="submit-button">
+              <img src="../../../assets/noun-floppy-disk-436102.svg" class="edit-icon" />
+            </button>
+          </div>
+        </form>
+        <ng-template #no_edit_block>
+          <div class="top-card-wr">
+            <span class="institution">{{education.institution}}</span>
+            <span class="title">{{education.study}}</span>
+            <span class="period"> {{education.period}}</span>
+            <button (click)="setEditMode(education.id, education)" class="edit-button" *ngIf="isAdmin">
+              <img src="../../../assets/icons8-edit.svg" class="edit-icon" />
+            </button>
+          </div>
+          <p class="description">{{education.description}}</p>
+        </ng-template>
       </li>
     </ul>
   </div>
