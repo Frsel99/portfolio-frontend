@@ -1,11 +1,11 @@
-<form #f="ngForm" (ngSubmit)="createEducation()" novalidate>
+<form #f="ngForm" (ngSubmit)="createProject()" novalidate>
   <div class="card-wr">
     <div class="top-card-wr">
-      <input class="institution" name="institution" [(ngModel)]="institution" placeholder="Institucion" />
-      <input class="study" name="study" [(ngModel)]="study" placeholder="Estudio" />
+      <input class="project" name="project" [(ngModel)]="project" placeholder="Proyecto" />
       <input class="period" name="period" [(ngModel)]="period" placeholder="Periodo" />
     </div>
     <textarea class="description" name="description" [(ngModel)]="description" placeholder="Descripcion"></textarea>
+    <button class="submit-button">Imagen</button>
     <div class="btn-wr">
       <button type="submit" class="submit-button">Agregar</button>
     </div>

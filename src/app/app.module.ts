@@ -10,7 +10,7 @@ import { ExperienceComponent } from './components/experience/experience.componen
 import { EducationComponent } from './components/education/education.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { SkillsComponent } from './components/skills/skills.component';
-import { ProyectsComponent } from './components/proyects/proyects.component';
+import { ProjectsComponent } from './components/projects/projects.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './views/home/home.component';
 import { LoginComponent } from './views/login/login.component'
@@ -19,6 +19,7 @@ import { InterceptorProvider } from './services/interceptor';
 import { CreateExperienceComponent } from './components/create-experience/create-experience.component';
 import { CreateSkillComponent } from './components/create-skill/create-skill.component';
 import { CreateEducationComponent } from './components/create-education/create-education.component';
+import { CreateProjectComponent } from './components/create-project/create-project.component';
 
 
 @NgModule({
@@ -30,12 +31,13 @@ import { CreateEducationComponent } from './components/create-education/create-e
     ExperienceComponent,
     EducationComponent,
     SkillsComponent,
-    ProyectsComponent,
+    ProjectsComponent,
     HomeComponent,
     LoginComponent,
     CreateExperienceComponent,
     CreateSkillComponent,
     CreateEducationComponent,
+    CreateProjectComponent,
   ],
   imports: [
     BrowserModule,

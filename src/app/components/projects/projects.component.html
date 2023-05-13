@@ -1,0 +1,53 @@
+<div class="row">
+  <div class="col-lg-12">
+    <h1>
+      <button (click)="setAddMode()" class="addButton" *ngIf="isAdmin">
+        +
+      </button>
+      Proyectos
+    </h1>
+    <app-create-project *ngIf="addMode"></app-create-project>
+    <ul>
+      <li *ngFor="let project of projects">
+        <form #f="ngForm" *ngIf="project.id === editId;else no_edit_block" (ngSubmit)="editProject(project.id)"
+          novalidate>
+          <div class="top-card-wr">
+            <button (click)="cancelEditMode()" class="back-button">
+              <img src="../../../assets/noun-curved-left-arrow-191576.svg" class="edit-icon" />
+            </button>
+            <input class="edit-project" name="project" (change)="handleChange($event)"
+              value="{{project.project}}" />
+            <input class="edit-period" name="period" (change)="handleChange($event)" value="{{project.period}}" />
+          </div>
+          <textarea class="edit-description" name="description"
+            (change)="handleChange($event)">{{project.description}}</textarea>
+          <div class="btn-wr">
+            <button type="button" (click)="deleteProject(project.id)" class="delete-button">
+              <img src="../../../assets/noun-bomb-pixel-2651796.svg" class="edit-icon" />
+            </button>
+            <button type="submit" class="submit-button">
+              <img src="../../../assets/noun-floppy-disk-436102.svg" class="edit-icon" />
+            </button>
+          </div>
+        </form> 
+        <ng-template #no_edit_block>
+          <div class="top-card-wr">
+            <span class="project">{{project.project}}</span>
+            <span class="period">{{project.period}}</span>
+            <button (click)="setEditMode(project.id, project)" class="edit-button" *ngIf="isAdmin">
+              <img src="../../../assets/icons8-edit.svg" class="edit-icon" />
+            </button>
+          </div>
+          <p class="description">{{project.description}}</p>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4 col-md-6 mb-4" *ngFor="let img of project.images">
+                <img src="{{img}}" class="img-fluid" alt="">
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </li>
+    </ul>
+  </div>
+</div>
