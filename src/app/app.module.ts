@@ -17,6 +17,7 @@ import { LoginComponent } from './views/login/login.component'
 import { FormsModule } from '@angular/forms';
 import { InterceptorProvider } from './services/interceptor';
 import { CreateExperienceComponent } from './components/create-experience/create-experience.component';
+import { CreateEducationComponent } from './components/create-education/create-education.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { CreateExperienceComponent } from './components/create-experience/create
     HomeComponent,
     LoginComponent,
     CreateExperienceComponent,
+    CreateEducationComponent,
   ],
   imports: [
     BrowserModule,
