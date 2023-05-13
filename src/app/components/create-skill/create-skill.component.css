@@ -1,0 +1,55 @@
+.card-wr {
+  color: #4d6278;
+  margin-left: 18.5%;
+  width: calc(var(--cards-width) - 1.5rem);
+  height: fit-content;
+  list-style: none;
+  padding: 2rem;
+  padding-top: 1.5rem;
+  margin-bottom: 2.7rem;
+  background-color: #333d52;
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+
+.top-card-wr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%;
+  margin: auto;
+
+}
+
+.skill,
+.percentage,
+.period {
+  color: black;
+  font-family: var(--titles-font);
+  font-size: 1.5rem;
+  font-weight: 500; 
+  padding-left: 1rem;
+  border: none;
+  border-radius: 2px;
+}
+
+.submit-button {
+  font-family: var(--titles-font);
+  background: none;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  border: none;
+  color: black;
+  padding: 1rem;
+  border-radius: 2px;
+  width: 15%;
+  background-color: white;
+}
+
+.btn-wr {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}

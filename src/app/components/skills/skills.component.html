@@ -1,17 +1,39 @@
 <div class="container">
   <div class="row gx-5 gy-5">
-    <h1>Soft & Hard Skills</h1>
-    <div class="col col-sm-6 col-lg-4 skill-circle-wr">
-      <circle-progress [percent]="85" [title]="'Javascript'" class="skill-circle"></circle-progress>
+    <h1>
+      Soft & Hard Skills
+      <button (click)="setAddMode()" class="addButton" *ngIf="isAdmin">
+        +
+      </button>
+    </h1>
+    <app-create-skill *ngIf="addMode"></app-create-skill>
+    <div class="col col-sm-6 col-lg-4 skill-circle-wr" *ngFor="let skill of skills">
+      <form #f="ngForm" *ngIf="skill.id === editId;else no_edit_block" (ngSubmit)="editSkill(skill.id)"
+        novalidate>
+        <div class="top-card-wr">
+          <button (click)="cancelEditMode()" class="back-button">
+            <img src="../../../assets/noun-curved-left-arrow-191576.svg" class="edit-icon" />
+          </button>
+          <input class="edit-skill" name="skill" (change)="handleChange($event)"
+            value="{{skill.skill}}" />
+          <input class="edit-percentage" name="percentage" (change)="handleChange($event)" value="{{skill.percentage}}" />
+        </div>
+        <div class="btn-wr">
+          <button type="button" (click)="deleteSkill(skill.id)" class="delete-button">
+            <img src="../../../assets/noun-bomb-pixel-2651796.svg" class="edit-icon" />
+          </button>
+          <button type="submit" class="submit-button">
+            <img src="../../../assets/noun-floppy-disk-436102.svg" class="edit-icon" />
+          </button>
+        </div>
+      </form>
+      <ng-template #no_edit_block>
+        <circle-progress [percent]="skill.percentage" [title]="skill.skill" class="skill-circle"></circle-progress>
+        <button (click)="setEditMode(skill.id, skill)" class="edit-button" *ngIf="isAdmin">
+          <img src="../../../assets/icons8-edit.svg" class="edit-icon" />
+        </button>
+      </ng-template>
     </div>
-    <div class="col col-md-6 col-lg-4 skill-circle-wr">
-      <circle-progress [percent]="85" [title]="'Python'" class="skill-circle"></circle-progress>
-    </div>
-    <div class="col col-md-6 col-lg-4 skill-circle-wr">
-      <circle-progress [percent]="85" [title]="'CSS'" class="skill-circle"></circle-progress>
-    </div>
-    <div class="col col-md-6 col-lg-4 skill-circle-wr">
-      <circle-progress [percent]="85" [title]="'HTML'" class="skill-circle"></circle-progress>
-    </div>
+
   </div>
 </div>
