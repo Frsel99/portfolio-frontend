@@ -14,6 +14,4 @@ export class Education {
     this.personId = personId;
     this.id = id;
   }
-
-
 }
