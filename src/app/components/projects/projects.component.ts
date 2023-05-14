@@ -80,6 +80,7 @@ export class ProjectsComponent {
     this.projectService.delete(id).subscribe(data => {
       if (data === "OK") {
         alert("Proyecto Eliminado")
+        window.location.reload();
       }
     }, err => {
       alert("Ocurrio un problema eliminando el proyecto")

@@ -75,6 +75,7 @@ export class SkillsComponent {
     this.skillService.delete(id).subscribe(data => {
       if(data === "OK") {
         alert("Habilidad Eliminada")
+        window.location.reload();
       }
     }, err => {
       alert("Ocurrio un problema eliminando la habilidad")

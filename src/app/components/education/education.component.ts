@@ -79,6 +79,7 @@ export class EducationComponent {
     this.educationService.delete(id).subscribe(data => {
       if(data === "OK") {
         alert("Educacion Eliminada")
+        window.location.reload();
       }
     }, err => {
       alert("Ocurrio un problema eliminando la educacion")
