@@ -1,6 +1,5 @@
 .card-wr {
   color: #4d6278;
-  margin-left: 18.5%;
   width: calc(var(--cards-width) - 1.5rem);
   height: fit-content;
   list-style: none;
@@ -10,7 +9,9 @@
   background-color: #333d52;
   border-radius: 10px;
   margin-top: 2rem;
+  float: right;
 }
+
 
 .top-card-wr {
   display: flex;

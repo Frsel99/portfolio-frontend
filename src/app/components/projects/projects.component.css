@@ -28,11 +28,16 @@ ul {
   padding: 0;
   list-style-type: none;
   margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
 }
 
 li {
   color: #4d6278;
-  width: var(--cards-width);
+  width: 75%;
   height: fit-content;
   list-style: none;
   padding: 2rem;
@@ -40,7 +45,6 @@ li {
   margin-bottom: 2.7rem;
   background-color: #333d52;
   border-radius: 10px;
-  float: right;
 }
 
 .top-card-wr {

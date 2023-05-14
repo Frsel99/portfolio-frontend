@@ -1,6 +1,5 @@
 .card-wr {
   color: #4d6278;
-  margin-left: 10%;
   width: calc(var(--cards-width) - 1.5rem);
   height: fit-content;
   list-style: none;
