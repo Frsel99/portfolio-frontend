@@ -63,7 +63,7 @@ h1 {
 .btn-wr {
   width: 100%;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   margin-top: 1rem;
   margin-left: 13%;
