@@ -81,6 +81,7 @@ export class ExperienceComponent implements OnInit {
     this.experienceService.delete(id).subscribe(data => {
       if(data === "OK") {
         alert("Experiencia Eliminada")
+        window.location.reload();
       }
     }, err => {
       alert("Ocurrio un problema eliminando la experiencia")
