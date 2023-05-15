@@ -11,12 +11,18 @@
 #gh-logo {
   width: 4rem;
   margin-right: 0.5rem;
+  cursor: pointer;
 }
 
 #ln-logo {
   width: 4rem;
   margin-left: 1rem;
+  cursor: pointer;
   margin-right: 2rem;
+}
+
+#gh-logo:hover, #ln-logo:hover, .login-button:hover {
+  transform: scale(1.1);
 }
 
 .icons-container {

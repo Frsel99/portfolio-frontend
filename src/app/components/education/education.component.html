@@ -31,12 +31,12 @@
         </form>
         <ng-template #no_edit_block>
           <div class="top-card-wr">
-            <span class="title">{{education.study}}</span>
-            <span class="institution">{{education.institution}}</span>
-            <span class="period"> {{education.period}}</span>
             <button (click)="setEditMode(education.id, education)" class="edit-button" *ngIf="isAdmin">
               <img src="../../../assets/icons8-edit.svg" class="edit-icon" />
             </button>
+            <span class="title">{{education.study}}</span>
+            <span class="institution">{{education.institution}}</span>
+            <span class="period"> {{education.period}}</span>
           </div>
           <p class="description">{{education.description}}</p>
         </ng-template>

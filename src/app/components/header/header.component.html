@@ -4,8 +4,8 @@
     <h1 class="welcome-msg">Hello World</h1>
   </div>
   <div class="icons-container">
-    <img src="../../../assets/Octicons-mark-github.svg" alt="404 Not Found" id="gh-logo" />
-    <img src="../../../assets/linkedin.svg" alt="404 Not Found" id="ln-logo" />
+    <img (click)="goToGithub()" src="../../../assets/Octicons-mark-github.svg" alt="404 Not Found" id="gh-logo" />
+    <img (click)="goToLinkedin()" src="../../../assets/linkedin.svg" alt="404 Not Found" id="ln-logo" />
     <button class="login-button" routerLink="/login" *ngIf="!isLogged">Ingresar</button>
     <button class="login-button" (click)="onLogOut()" routerLink="/login" *ngIf="isLogged">Cerrar Sesion</button>
   </div>

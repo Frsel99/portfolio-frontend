@@ -28,10 +28,10 @@
           </div>
         </form>
         <ng-template #no_edit_block>
-          <circle-progress [percent]="skill.percentage" [title]="skill.skill"></circle-progress>
           <button (click)="setEditMode(skill.id, skill)" class="edit-button" *ngIf="isAdmin">
             <img src="../../../assets/icons8-edit.svg" class="edit-icon" />
           </button>
+          <circle-progress [percent]="skill.percentage" [title]="skill.skill"></circle-progress>
         </ng-template>
       </div>
     </div>
