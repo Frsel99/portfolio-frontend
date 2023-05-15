@@ -193,6 +193,10 @@ form img:hover {
   transform: scale(1.1);
 }
 
+.edit-button:hover {
+  transform: scale(1.1);
+}
+
 
 
 @media screen and (max-width: 1300px) {
@@ -208,6 +212,9 @@ form img:hover {
   .description {
     padding: 0;
   }
+  .edit-button {
+    margin-bottom: 1rem;
+  }
 }
 
 @media screen and (max-width: 1050px) {
@@ -219,6 +226,13 @@ form img:hover {
   }
   .description {
     font-size: 1.1rem;
+  }
+  .edit-icon {
+    height: 1.5rem;
+  }
+  .addButton {
+    width: 2.5rem;
+    height: 2.5rem;
   }
 }
 
@@ -232,6 +246,10 @@ form img:hover {
   .period, .title {
     margin-top: 0.25rem;
     margin-bottom: 0.5rem;
+  }
+  .addButton {
+    width: 2rem;
+    height: 2rem;
   }
 }
 
@@ -257,6 +275,11 @@ form img:hover {
   }
   .description {
     font-size: 0.9rem;
+  }
+  .addButton {
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 2rem;
   }
 }
 

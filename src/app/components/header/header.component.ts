@@ -22,4 +22,11 @@ export class HeaderComponent implements OnInit {
     this.tokenService.logout();
     this.router.navigate(['/']).then(() => window.location.reload())
   }
+
+  goToGithub() {
+    window.open("https://github.com/Frsel99", "_blank")
+  }
+  goToLinkedin() {
+    window.open("https://www.linkedin.com/in/francoleyesdev/", "_blank")
+  }
 }

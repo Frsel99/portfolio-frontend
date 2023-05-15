@@ -86,6 +86,10 @@
   width: 2rem;
 }
 
+.edit-button:hover {
+  transform: scale(1.1);
+}
+
 .back-button {
   width: fit-content;
   background: none;

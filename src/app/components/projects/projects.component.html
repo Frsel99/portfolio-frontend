@@ -31,11 +31,11 @@
         </form>
         <ng-template #no_edit_block>
           <div class="top-card-wr">
-            <span class="project">{{project.project}}</span>
-            <span class="period">{{project.period}}</span>
             <button (click)="setEditMode(project.id, project)" class="edit-button" *ngIf="isAdmin">
               <img src="../../../assets/icons8-edit.svg" class="edit-icon" />
             </button>
+            <span class="project">{{project.project}}</span>
+            <span class="period">{{project.period}}</span>
           </div>
           <p class="description">{{project.description}}</p>
           <div class="row">

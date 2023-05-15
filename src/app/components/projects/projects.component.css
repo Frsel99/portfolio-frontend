@@ -192,10 +192,16 @@ form img:hover {
   transform: scale(1.1);
 }
 
+.edit-button:hover {
+  transform: scale(1.1);
+}
 
 @media screen and (max-width: 1300px) {
   li {
     width: 100%;
+  }
+  .edit-button {
+    margin-bottom: 1rem;
   }
 }
 
@@ -209,6 +215,20 @@ form img:hover {
   }
   .description {
     font-size: 1.1rem;
+  }
+  .edit-icon {
+    height: 1.5rem;
+  }
+  .addButton {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .addButton {
+    width: 2rem;
+    height: 2rem;
   }
 }
 
@@ -229,6 +249,11 @@ form img:hover {
   }
   .description {
     font-size: 0.9rem;
+  }
+  .addButton {
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 2rem;
   }
 }
 
