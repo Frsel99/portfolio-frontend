@@ -5,7 +5,10 @@
       <input class="period" name="period" [(ngModel)]="period" placeholder="Periodo" />
     </div>
     <textarea class="description" name="description" [(ngModel)]="description" placeholder="Descripcion"></textarea>
-    <input type="image" class="submit-button"/>
+    <input type="file" accept="image/*" (change)="uploadImg($event)" />
+    <div class="col-lg-4 col-md-6 mb-4" *ngFor="let img of images">
+      <img src="{{img}}" class="img-fluid" alt="">
+    </div>
     <div class="btn-wr">
       <button type="submit" class="submit-button">Agregar</button>
     </div>

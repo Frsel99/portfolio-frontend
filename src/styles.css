@@ -20,11 +20,6 @@
   word-wrap: break-word;
 }
 
-
-body {
-  overflow-x: hidden;
-}
-
 @font-face {
   font-family: 'Pixeboy';
   src: url('./assets/Pixeboy-z8XGD.ttf') format('truetype');

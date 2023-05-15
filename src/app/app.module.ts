@@ -20,6 +20,10 @@ import { CreateExperienceComponent } from './components/create-experience/create
 import { CreateSkillComponent } from './components/create-skill/create-skill.component';
 import { CreateEducationComponent } from './components/create-education/create-education.component';
 import { CreateProjectComponent } from './components/create-project/create-project.component';
+import { StorageModule } from '@angular/fire/storage';
+import { FirebaseApp, provideFirebaseApp } from '@angular/fire/app';
+import { initializeApp } from 'firebase/app';
+import { firebaseConfig } from 'firebase-config';
 
 
 @NgModule({
@@ -44,6 +48,8 @@ import { CreateProjectComponent } from './components/create-project/create-proje
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    StorageModule,
+    provideFirebaseApp(() => initializeApp(firebaseConfig)),
     NgCircleProgressModule.forRoot({
       "radius": 130,
       "space": -10,

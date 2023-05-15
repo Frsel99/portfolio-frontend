@@ -22,7 +22,6 @@ export class ProjectService {
     return this.httpClient.patch<any>(`${this.URL}/update`, project);
   }
   public delete(id: number | undefined): Observable<any> {
-    console.log(id);
     return this.httpClient.delete<any>(`${this.URL}/delete/${id}`);
   }
 }
