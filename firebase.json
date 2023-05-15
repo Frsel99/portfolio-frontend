@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "portfolio-franco-leyes",
+    "public": "dist/portfolio-frontend",
     "ignore": [
       "firebase.json",
       "**/.*",
