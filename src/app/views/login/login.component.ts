@@ -41,7 +41,7 @@ export class LoginComponent implements OnInit {
       this.isLogged = false;
       this.isLogginFail = true;
       this.errMsg = err.error.message;
-      console.error(this.errMsg);
+      alert("Credenciales Invalidas")
     })
   }
 }

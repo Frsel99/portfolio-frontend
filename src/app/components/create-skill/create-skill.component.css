@@ -59,3 +59,40 @@ form {
   align-items: center;
   margin-top: 1rem;
 }
+
+@media screen and (max-width: 1250px) {
+  .submit-button {
+    width: 20%;
+  }
+}
+
+@media screen and (max-width: 995px) {
+  .submit-button {
+    width: 30%;
+  }
+  .card-wr {
+    width: 100%;
+  }
+
+  .top-card-wr {
+    flex-wrap: wrap;
+  }
+
+  .skill {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .percentage {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .btn-wr {
+    width: 100%;
+  }
+  .submit-button {
+    width: 50%;
+    padding: 0;
+  }
+}
