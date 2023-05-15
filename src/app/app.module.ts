@@ -68,6 +68,7 @@ import { firebaseConfig } from 'firebase-config';
       "titleColor": "#ffffff",
       "titleFontSize": "2rem",
       "showSubtitle": false,
+      "responsive": true,
     })
   ],
   providers: [InterceptorProvider],

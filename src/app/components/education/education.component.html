@@ -14,8 +14,8 @@
             <button (click)="cancelEditMode()" class="back-button">
               <img src="../../../assets/noun-curved-left-arrow-191576.svg" class="edit-icon" />
             </button>
-            <input class="edit-institution" name="institution" (change)="handleChange($event)" value="{{education.institution}}" />
             <input class="edit-study" name="study" (change)="handleChange($event)" value="{{education.study}}" />
+            <input class="edit-institution" name="institution" (change)="handleChange($event)" value="{{education.institution}}" />
             <input class="edit-period" name="period" (change)="handleChange($event)" value="{{education.period}}" />
           </div>
           <textarea class="edit-description" name="description"
@@ -31,8 +31,8 @@
         </form>
         <ng-template #no_edit_block>
           <div class="top-card-wr">
-            <span class="institution">{{education.institution}}</span>
             <span class="title">{{education.study}}</span>
+            <span class="institution">{{education.institution}}</span>
             <span class="period"> {{education.period}}</span>
             <button (click)="setEditMode(education.id, education)" class="edit-button" *ngIf="isAdmin">
               <img src="../../../assets/icons8-edit.svg" class="edit-icon" />

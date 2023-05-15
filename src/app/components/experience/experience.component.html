@@ -31,8 +31,8 @@
         </form>
         <ng-template #no_edit_block>
           <div class="top-card-wr">
-            <span class="company">{{exp.company}}</span>
             <span class="title">{{exp.job}}</span>
+            <span class="company">{{exp.company}}</span>
             <span class="period"> {{exp.period}}</span>
             <button (click)="setEditMode(exp.id, exp)" class="edit-button" *ngIf="isAdmin">
               <img src="../../../assets/icons8-edit.svg" class="edit-icon" />

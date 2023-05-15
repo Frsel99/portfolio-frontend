@@ -1,8 +1,11 @@
-
 #ap-logo {
   width: 12rem;
   margin-left: 2rem;
   margin-right: 4rem;
+}
+
+.icons-container {
+  margin-right: 1rem;
 }
 
 #gh-logo {
@@ -16,12 +19,18 @@
   margin-right: 2rem;
 }
 
+.icons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .login-button {
   color: black;
   border: none;
   padding-inline: 0.8rem;
   padding-block: 0.25rem;
-  border-radius: 10px;
+  border-radius: 4px;
   margin-right: 2rem;
   font-family: var(--titles-font);
   font-size: 1.5rem;
@@ -51,5 +60,240 @@
 
   to {
     background-position: center 200%;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  #ap-logo {
+    width: 11rem;
+  }
+
+  #gh-logo,
+  #ln-logo {
+    width: 3rem;
+  }
+
+  #ln-logo {
+    margin-right: 1.5rem;
+  }
+
+  .login-button {
+    font-size: 1.3rem;
+  }
+
+  .welcome-msg {
+    font-size: 5.5rem;
+    margin-right: 3rem;
+  }
+
+}
+
+@media screen and (max-width: 1300px) {
+  #ap-logo {
+    width: 9rem;
+  }
+
+  #gh-logo,
+  #ln-logo {
+    width: 2.25rem;
+  }
+
+  .login-button {
+    font-size: 1.15rem;
+  }
+
+  .welcome-msg {
+    font-size: 4.5rem;
+    margin-right: 2rem;
+  }
+
+}
+
+@media screen and (max-width: 1090px) {
+  #ap-logo {
+    margin-right: 1rem;
+  }
+
+  #gh-logo,
+  #ln-logo {
+    width: 2rem;
+  }
+
+  #ln-logo {
+    margin-right: 0.75rem;
+    margin-left: 0.75rem;
+  }
+
+  #gh-logo {
+    margin-right: 0;
+  }
+
+  .welcome-msg {
+    margin-right: 0;
+    font-size: 3rem;
+  }
+
+  .msg-container {
+    width: 30rem
+  }
+
+  .login-button {
+    font-size: 1rem;
+    padding-inline: 0.4rem;
+    padding-block: 0.1rem;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  #ap-logo {
+    width: 6rem;
+  }
+
+  #gh-logo,
+  #ln-logo {
+    width: 1.5rem;
+  }
+
+  .login-button {
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .welcome-msg {
+    font-size: 3rem;
+  }
+}
+
+
+@media screen and (max-width: 725px) {
+  #ap-logo {
+    width: 8rem;
+  }
+
+  #gh-logo,
+  #ln-logo {
+    width: 2rem;
+  }
+
+  .login-button {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 625px) {
+  #ap-logo {
+    width: 6rem;
+    margin-left: 1rem;
+  }
+
+  #gh-logo,
+  #ln-logo {
+    width: 1.5rem;
+  }
+
+  .login-button {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 525px) {
+  .icons-container {
+    flex-wrap: wrap;
+  }
+
+  .login-button {
+    height: 100%;
+    margin: auto;
+    margin-top: 1rem;
+    margin-right: 20%;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .welcome-msg {
+    font-size: 2rem;
+  }
+
+  #ap-logo {
+    width: 5rem;
+  }
+
+  #gh-logo,
+  #ln-logo {
+    width: 1.25rem;
+  }
+
+  .login-button {
+    font-size: 0.65rem;
+    margin-right: 33%;
+  }
+
+  .msg-container {
+    width: 14rem
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .login-button {
+    margin-right: 26%;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  #ap-logo {
+    width: 4rem;
+  }
+
+  #ln-logo {
+    margin-right: 0.4rem;
+    margin-left: 0.4rem;
+  }
+
+  #gh-logo,
+  #ln-logo {
+    width: 1.25rem;
+  }
+
+  .login-button {
+    font-size: 0.5rem;
+    /* margin-right: 25%; */
+  }
+
+  .msg-container {
+    width: 14rem
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .icons-container {
+    width: 50%;
+    margin-right: 0;
+  }
+
+  #gh-logo, #ln-logo {
+    width: 1.5rem;
+  }
+  .login-button {
+    font-size: 0.75rem;
+  }
+
+  .login-button {
+    width: fit-content;
+    margin: auto;
+    margin-left: 0;
+    margin-right: 1rem;
+  }
+  .msg-container {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 240px) {
+  .icons-container {
+    width: 70%;
+  }
+  #ap-logo {
+    margin-right: 0;
   }
 }
