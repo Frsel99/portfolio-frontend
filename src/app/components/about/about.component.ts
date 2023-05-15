@@ -49,6 +49,9 @@ export class AboutComponent implements OnInit {
   }
 
   uploadImg(e: any) {
+    if(!this.isAdmin) {
+      return;
+    }
     const file = e.target.files[0];
     const uuid = UUID.UUID();
     const imgRef = ref(this.storage, `images/${uuid}`)
