@@ -5,8 +5,12 @@
       <input class="period" name="period" [(ngModel)]="period" placeholder="Periodo" />
     </div>
     <textarea class="description" name="description" [(ngModel)]="description" placeholder="Descripcion"></textarea>
-    <input type="file" accept="image/*" (change)="uploadImg($event)" />
-    <div class="col-lg-4 col-md-6 mb-4" *ngFor="let img of images">
+    <label for="upload" class="label">
+      <img src="../../../assets/noun-arrow-170027.svg" alt="404"/>
+      <span > Subir Imagen </span>
+      <input id="upload" type="file" accept="image/*" (change)="uploadImg($event)" />
+    </label>
+    <div class="col-lg-4 col-md-6 mb-4 img-container" *ngFor="let img of images">
       <img src="{{img}}" class="img-fluid" alt="">
     </div>
     <div class="btn-wr">

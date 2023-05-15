@@ -26,7 +26,7 @@
   color: black;
   font-family: var(--titles-font);
   font-size: 1.5rem;
-  font-weight: 500; 
+  font-weight: 500;
   padding-left: 1rem;
   border: none;
   border-radius: 2px;
@@ -65,4 +65,107 @@
   justify-content: center;
   align-items: center;
   margin-top: 1rem;
+}
+
+@media screen and (max-width: 1600px) {
+  .top-card-wr {
+    width: 100%;
+  }
+
+  .description {
+    height: 100%;
+  }
+
+  .edit-button {
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .job {
+    font-size: 1.5rem;
+  }
+
+  .company,
+  .period {
+    font-size: 1.25rem;
+  }
+
+  .description {
+    font-size: 1.1rem;
+  }
+
+  .edit-icon {
+    height: 1.5rem;
+  }
+
+  .submit-button {
+    width: 40%
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .top-card-wr {
+    flex-wrap: wrap;
+  }
+
+  .job {
+    width: 100%;
+  }
+
+  .period,
+  .company {
+    width: 100%;
+  }
+
+  .company {
+    margin-top: 0.5rem;
+    margin-block: 0.5rem;
+  }
+  .card-wr {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .submit-button {
+    width: 65%;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .section-wr {
+    width: 100%;
+  }
+
+  .company {
+    width: 100%;
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+  }
+
+  .period {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+
+  h1 {
+    justify-content: center;
+    font-size: 1.5rem;
+  }
+
+  .job {
+    font-size: 1.25rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+
+  .addButton {
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 2rem;
+  }
 }
