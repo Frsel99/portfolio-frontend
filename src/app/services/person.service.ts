@@ -10,9 +10,11 @@ import { Person } from '../models/person';
 export class PersonService {
   URL = enviroment.DOMAIN;
 
+
   constructor(private http: HttpClient) { }
 
   public getPerson(): Observable<Person> {
+    console.log(this.URL);
     return this.http.get<Person>(this.URL + "/person");
   }
 }
