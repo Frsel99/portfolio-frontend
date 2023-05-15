@@ -139,7 +139,18 @@ img {
   visibility: hidden;
 }
 
+@media screen and (max-width: 1850px) and (max-height: 800px) {
+  .description {
+    font-size: 1.10rem;
+    margin-top: 2rem;
+  }
+}
+
 @media screen and (max-width: 1700px) {
+  .profile-pic {
+    top: -3.5rem;
+  }
+
   .personal-data-wr {
     left: 35%;
   }
@@ -163,27 +174,42 @@ img {
 
 @media screen and (max-width: 1300px) {
   .profile-pic {
-    top: -2rem;
+    top: -2.5rem;
     left: 15%;
   }
+
   .profile-pic>img {
     object-fit: cover;
     border-radius: 50%;
     width: 12rem;
     height: 12rem;
   }
+
   .personal-data-wr {
     width: fit-content;
   }
+
   .name {
     font-size: 1.75rem;
   }
+
   .title {
     font-size: 1.25rem;
-    margin-left: 4rem;
+    margin-left: 3rem;
   }
+  .description-wr {
+    bottom: 17%;
+
+  }
+
   .description {
     font-size: 1.10rem;
+  }
+} 
+
+@media screen and (max-width: 1060px) {
+  .description-wr {
+    width: 55%;
   }
 }
 
@@ -194,6 +220,7 @@ img {
     left: 10%;
     top: -1.5rem;
   }
+
   .description-wr {
     width: fit-content;
     max-width: 60%;
@@ -204,7 +231,9 @@ img {
 @media screen and (max-width: 750px) {
   .row {
     height: fit-content;
+    width: 100%;
   }
+
   .img-main-wr {
     display: block;
     width: 100%;
@@ -212,11 +241,13 @@ img {
     margin-top: 1rem;
     height: fit-content;
   }
+
   .profile-pic {
     position: static;
     display: block;
     width: 100%;
   }
+
   .personal-data-wr {
     display: block;
     width: 100%;
@@ -225,6 +256,7 @@ img {
     margin-top: 2rem;
     margin-left: 1.5rem;
   }
+
   .description-wr {
     display: block;
     margin: auto;
@@ -232,5 +264,30 @@ img {
     max-width: 100%;
     position: static;
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .title {
+    font-size: 1.1rem;
+    margin-left: 0;
+  }
+
+  .name {
+    font-size: 1.25rem;
+  }
+
+  .profile-pic {
+    margin-left: 0.75rem;
+  }
+
+  .personal-data-wr {
+    margin-top: 3rem;
+    margin-left: 0.85rem;
+  }
+
+  .description {
+    margin-left: 1.2rem;
+    font-size: 0.9rem;
   }
 }

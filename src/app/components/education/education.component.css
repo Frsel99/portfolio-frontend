@@ -193,3 +193,72 @@ form img:hover {
   transform: scale(1.1);
 }
 
+
+
+@media screen and (max-width: 1300px) {
+  li {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .top-card-wr {
+    width: 100%;
+  }
+  .description {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .title {
+    font-size: 1.5rem;
+  }
+  .institution, .period {
+    font-size: 1.25rem;
+  }
+  .description {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .top-card-wr {
+    flex-wrap: wrap;
+  }
+  .title {
+    width: 100%;
+  }
+  .period, .title {
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .section-wr {
+    width: 100%;
+  }
+  .institution {
+    width: 100%;
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+  }
+  .period {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+  h1 {
+    justify-content: center;
+    font-size: 1.5rem;
+  }
+  .title {
+    font-size: 1.25rem;
+  }
+  .description {
+    font-size: 0.9rem;
+  }
+}
+
+
+

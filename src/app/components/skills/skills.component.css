@@ -1,11 +1,7 @@
-.skill-circle-wr {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.skill-circle {
+circle-progress {
   font-family: var(--titles-font);
+  width: fit-content;
+  height: fit-content;
 }
 
 h1 {
@@ -28,7 +24,6 @@ h1 {
   height: 3rem;
   margin-left: 2rem;
 }
-
 
 .edit-skill,
 .edit-percentage,
@@ -134,4 +129,28 @@ form img:hover {
 }
 .submit-button img:hover{
   transform: scale(1.1);
+}
+
+
+.main-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+}
+
+@media screen and (max-width: 770px) {
+  .main-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .main-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .skill-circle-wr {
+    width: 55%;
+    margin: auto;
+  }
 }

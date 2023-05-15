@@ -15,8 +15,7 @@
             <button (click)="cancelEditMode()" class="back-button">
               <img src="../../../assets/noun-curved-left-arrow-191576.svg" class="edit-icon" />
             </button>
-            <input class="edit-project" name="project" (change)="handleChange($event)"
-              value="{{project.project}}" />
+            <input class="edit-project" name="project" (change)="handleChange($event)" value="{{project.project}}" />
             <input class="edit-period" name="period" (change)="handleChange($event)" value="{{project.period}}" />
           </div>
           <textarea class="edit-description" name="description"
@@ -29,7 +28,7 @@
               <img src="../../../assets/noun-floppy-disk-436102.svg" class="edit-icon" />
             </button>
           </div>
-        </form> 
+        </form>
         <ng-template #no_edit_block>
           <div class="top-card-wr">
             <span class="project">{{project.project}}</span>
@@ -39,11 +38,9 @@
             </button>
           </div>
           <p class="description">{{project.description}}</p>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-4 col-md-6 mb-4" *ngFor="let img of project.images">
-                <img src="{{img}}" class="img-fluid" alt="">
-              </div>
+          <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4" *ngFor="let img of project.images">
+              <img src="{{img}}" class="img-fluid" alt="">
             </div>
           </div>
         </ng-template>
