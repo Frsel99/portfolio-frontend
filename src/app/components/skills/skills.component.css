@@ -26,8 +26,7 @@ h1 {
 }
 
 .edit-skill,
-.edit-percentage,
-.edit-period {
+.edit-percentage {
   color: black;
   font-family: var(--titles-font);
   font-size: 1.5rem;
@@ -146,10 +145,34 @@ form img:hover {
   grid-gap: 2rem;
 }
 
+@media screen and (max-width: 1200px) {
+  .edit-skill {
+    width: 90%;
+  }
+
+  .edit-percentage {
+    width: 90%;
+  }
+
+  .edit-skill,
+  .edit-percentage {
+    margin-left: 0;
+  }
+}
+
 @media screen and (max-width: 1050px) {
   .addButton {
     width: 2.5rem;
     height: 2.5rem;
+  }
+
+}
+
+
+@media screen and (max-width: 990px) {
+  .btn-wr {
+    width: 100%;
+    margin-left: -5%;
   }
 }
 
@@ -179,9 +202,24 @@ form img:hover {
     width: 55%;
     margin: auto;
   }
+
   .addButton {
     width: 1.5rem;
     height: 1.5rem;
     font-size: 2rem;
+  }
+
+  .top-card-wr {
+    width: 100%;
+  }
+
+  .btn-wr {
+    transform: scale(0.8);
+    float: left;
+  }
+
+  .edit-skill,
+  .edit-percentage {
+    width: 100%;
   }
 }

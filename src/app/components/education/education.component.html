@@ -12,7 +12,7 @@
         <form #f="ngForm" *ngIf="education.id === editId;else no_edit_block" (ngSubmit)="editEducation(education.id)" novalidate>
           <div class="top-card-wr">
             <button (click)="cancelEditMode()" class="back-button">
-              <img src="../../../assets/noun-curved-left-arrow-191576.svg" class="edit-icon" />
+              <img src="../../../assets/noun-curved-left-arrow-191576.svg" class="editing-icon" />
             </button>
             <input class="edit-study" name="study" (change)="handleChange($event)" value="{{education.study}}" />
             <input class="edit-institution" name="institution" (change)="handleChange($event)" value="{{education.institution}}" />
@@ -22,10 +22,10 @@
             (change)="handleChange($event)">{{education.description}}</textarea>
           <div class="btn-wr">
             <button type="button" (click)="deleteEducation(education.id)" class="delete-button">
-              <img src="../../../assets/noun-bomb-pixel-2651796.svg" class="edit-icon" />
+              <img src="../../../assets/noun-bomb-pixel-2651796.svg" class="editing-icon" />
             </button>
             <button type="submit" class="submit-button">
-              <img src="../../../assets/noun-floppy-disk-436102.svg" class="edit-icon" />
+              <img src="../../../assets/noun-floppy-disk-436102.svg" class="editing-icon" />
             </button>
           </div>
         </form>
