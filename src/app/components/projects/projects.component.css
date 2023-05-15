@@ -196,6 +196,24 @@ form img:hover {
   transform: scale(1.1);
 }
 
+@media screen and (max-width: 1700px) {
+  .top-card-wr {
+    flex-wrap: wrap;
+    margin: 0;
+    width: 100%;
+  }
+  .edit-project {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+  .edit-period {
+    display: block;
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 1300px) {
   li {
     width: 100%;
@@ -229,6 +247,15 @@ form img:hover {
   .addButton {
     width: 2rem;
     height: 2rem;
+  }
+  .edit-period {
+    font-size: 1.1rem;
+  }
+  .edit-project {
+    font-size: 1.2rem;
+  }
+  .edit-description {
+    font-size: 1rem;
   }
 }
 

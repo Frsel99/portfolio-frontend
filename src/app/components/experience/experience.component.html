@@ -12,20 +12,20 @@
         <form #f="ngForm" *ngIf="exp.id === editId;else no_edit_block" (ngSubmit)="editExperience(exp.id)" novalidate>
           <div class="top-card-wr">
             <button (click)="cancelEditMode()" class="back-button">
-              <img src="../../../assets/noun-curved-left-arrow-191576.svg" class="edit-icon" />
+              <img src="../../../assets/noun-curved-left-arrow-191576.svg" class="editing-icon" />
             </button>
-            <input class="edit-company" name="company" (change)="handleChange($event)" value="{{exp.company}}" />
             <input class="edit-job" name="job" (change)="handleChange($event)" value="{{exp.job}}" />
+            <input class="edit-company" name="company" (change)="handleChange($event)" value="{{exp.company}}" />
             <input class="edit-period" name="period" (change)="handleChange($event)" value="{{exp.period}}" />
           </div>
           <textarea class="edit-description" name="description"
             (change)="handleChange($event)">{{exp.description}}</textarea>
           <div class="btn-wr">
             <button type="button" (click)="deleteExperience(exp.id)" class="delete-button">
-              <img src="../../../assets/noun-bomb-pixel-2651796.svg" class="edit-icon" />
+              <img src="../../../assets/noun-bomb-pixel-2651796.svg" class="editing-icon" />
             </button>
             <button type="submit" class="submit-button">
-              <img src="../../../assets/noun-floppy-disk-436102.svg" class="edit-icon" />
+              <img src="../../../assets/noun-floppy-disk-436102.svg" class="editing-icony" />
             </button>
           </div>
         </form>

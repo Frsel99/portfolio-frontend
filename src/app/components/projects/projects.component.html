@@ -13,7 +13,7 @@
           novalidate>
           <div class="top-card-wr">
             <button (click)="cancelEditMode()" class="back-button">
-              <img src="../../../assets/noun-curved-left-arrow-191576.svg" class="edit-icon" />
+              <img src="../../../assets/noun-curved-left-arrow-191576.svg" class="editing-icon" />
             </button>
             <input class="edit-project" name="project" (change)="handleChange($event)" value="{{project.project}}" />
             <input class="edit-period" name="period" (change)="handleChange($event)" value="{{project.period}}" />
@@ -22,10 +22,10 @@
             (change)="handleChange($event)">{{project.description}}</textarea>
           <div class="btn-wr">
             <button type="button" (click)="deleteProject(project.id)" class="delete-button">
-              <img src="../../../assets/noun-bomb-pixel-2651796.svg" class="edit-icon" />
+              <img src="../../../assets/noun-bomb-pixel-2651796.svg" class="editing-icon" />
             </button>
             <button type="submit" class="submit-button">
-              <img src="../../../assets/noun-floppy-disk-436102.svg" class="edit-icon" />
+              <img src="../../../assets/noun-floppy-disk-436102.svg" class="editing-icon" />
             </button>
           </div>
         </form>
