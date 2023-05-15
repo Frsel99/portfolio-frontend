@@ -1,5 +1,5 @@
 
 
 export const enviroment = {
-  DOMAIN: "http://localhost:8080",
+  DOMAIN: "https://portfolio-franco-leyes.onrender.com",
 }
