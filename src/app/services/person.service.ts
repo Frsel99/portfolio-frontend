@@ -8,13 +8,16 @@ import { Person } from '../models/person';
   providedIn: 'root'
 })
 export class PersonService {
-  URL = enviroment.DOMAIN;
+  URL = `${enviroment.DOMAIN}/person`;
 
 
   constructor(private http: HttpClient) { }
 
   public getPerson(): Observable<Person> {
-    console.log(this.URL);
-    return this.http.get<Person>(this.URL + "/person");
+    return this.http.get<Person>(this.URL);
+  }
+
+  public update(id: number | undefined, person: Person): Observable<any> {
+    return this.http.patch<Person>(`${this.URL}/update/${id}`, person);
   }
 }

@@ -77,7 +77,6 @@ export class ExperienceComponent implements OnInit {
   }
 
   deleteExperience(id: number | undefined) {
-    console.log(id);
     this.experienceService.delete(id).subscribe(data => {
       if(data === "OK") {
         alert("Experiencia Eliminada")

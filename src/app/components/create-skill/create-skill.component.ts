@@ -18,7 +18,6 @@ export class CreateSkillComponent {
   createSkill() {
     const skill = new Skill(this.skill, this.percentage, this.personId)
     this.skillService.save(skill).subscribe(data => {
-      console.log(skill);
       alert("Habilidad Añadida");
       window.location.reload();
     }, err => {

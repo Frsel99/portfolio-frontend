@@ -1,12 +1,33 @@
 <div class="row">
-  <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 profile-pic">
-    <img src="../../../assets/perfil1.png" />
+  <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 img-main-wr">
+    <label for="upload-img" class="profile-pic">
+      <img src="{{url}}" [ngClass]="isAdmin ? 'edit-img': ''" />
+    </label>
+    <input id="upload-img" (change)="uploadImg($event)" type="file" class="input-file" accept="image/*" />
   </div>
   <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 personal-data-wr">
     <span class="name">{{person.firstName}} {{person.lastName}} </span>
     <span class="title">Full Stack Developer Jr</span>
   </div>
   <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 description-wr">
-    <p class="description">{{person.description}}</p>
+
+    <form #f="ngForm" *ngIf="editMode;else no_edit_block" (ngSubmit)="editPerson(person.id)" novalidate
+      class="description">
+      <button (click)="setEditMode()" class="back-button">
+        <img src="../../../assets/noun-curved-left-arrow-191576.svg" class="edit-icon" />
+      </button>
+      <textarea class="edit-description" name="description" [(ngModel)]="newDescription"></textarea>
+      <button type="submit" class="submit-button">
+        <img src="../../../assets/noun-floppy-disk-436102.svg" class="edit-icon" />
+      </button>
+    </form>
+
+    <ng-template #no_edit_block>
+      <p class="description">{{person.description}}
+        <button (click)="setEditMode()" class="edit-button" *ngIf="isAdmin">
+          <img src="../../../assets/icons8-edit.svg" class="edit-icon" />
+        </button>
+      </p>
+    </ng-template>
   </div>
 </div>
