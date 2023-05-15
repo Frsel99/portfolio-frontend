@@ -3,7 +3,7 @@
     <label for="upload-img" class="profile-pic">
       <img src="{{url}}" [ngClass]="isAdmin ? 'edit-img': ''" />
     </label>
-    <input id="upload-img" (change)="uploadImg($event)" type="file" class="input-file" accept="image/*" />
+    <input *ngIf="isAdmin" id="upload-img" (change)="uploadImg($event)" type="file" class="input-file" accept="image/*" />
   </div>
   <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 personal-data-wr">
     <span class="name">{{person.firstName}} {{person.lastName}} </span>
