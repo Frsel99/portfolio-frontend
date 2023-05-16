@@ -67,6 +67,10 @@ export class ProjectsComponent {
     const project = new Project(this.form.project, this.form.period, this.form.description, this.form.images, this.form.personId)
     project.id = id;
     this.projectService.update(project).subscribe(data => {
+      if (data === 'BAD_REQUEST') {
+        alert("Faltan Campos");
+        throw new Error("Faltan Campos");
+      }
       alert("Proyecto Actualizado");
       const index = this.projects.findIndex(exp => exp.id === id)
       this.projects[index] = project;

@@ -47,7 +47,7 @@ export class SkillsComponent {
     this.editId = id;
     this.form = skill;
   }
-  
+
   cancelEditMode() {
     this.editId = 0;
   }
@@ -62,6 +62,10 @@ export class SkillsComponent {
     const skill = new Skill(this.form.skill, this.form.percentage, this.form.personId)
     skill.id = id;
     this.skillService.update(skill).subscribe(data => {
+      if (data === 'BAD_REQUEST') {
+        alert("Faltan Campos");
+        throw new Error("Faltan Campos");
+      }
       alert("Habilidad Actualizada");
       const index = this.skills.findIndex(exp => exp.id === id)
       this.skills[index] = skill;
@@ -73,7 +77,7 @@ export class SkillsComponent {
 
   deleteSkill(id: number | undefined) {
     this.skillService.delete(id).subscribe(data => {
-      if(data === "OK") {
+      if (data === "OK") {
         alert("Habilidad Eliminada")
         window.location.reload();
       }

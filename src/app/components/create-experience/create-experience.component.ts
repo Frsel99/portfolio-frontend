@@ -22,6 +22,10 @@ export class CreateExperienceComponent {
   createExperience() {
     const experience = new Experience(this.job, this.period, this.description, this.company, this.personId)
     this.experienceService.save(experience).subscribe(data => {
+      if (data === 'BAD_REQUEST') {
+        alert("Faltan Campos");
+        throw new Error("Faltan Campos");
+      }
       alert("Experiencia Añadida");
       window.location.reload();
     }, err => {

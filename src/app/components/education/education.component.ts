@@ -51,7 +51,7 @@ export class EducationComponent {
     this.editId = id;
     this.form = education;
   }
-  
+
   cancelEditMode() {
     this.editId = 0;
   }
@@ -66,6 +66,10 @@ export class EducationComponent {
     const education = new Education(this.form.study, this.form.period, this.form.description, this.form.institution, this.form.personId)
     education.id = id;
     this.educationService.update(education).subscribe(data => {
+      if (data === 'BAD_REQUEST') {
+        alert("Faltan Campos");
+        throw new Error("Faltan Campos");
+      }
       alert("Educacion Actualizada");
       const index = this.educations.findIndex(exp => exp.id === id)
       this.educations[index] = education;
@@ -77,7 +81,7 @@ export class EducationComponent {
 
   deleteEducation(id: number | undefined) {
     this.educationService.delete(id).subscribe(data => {
-      if(data === "OK") {
+      if (data === "OK") {
         alert("Educacion Eliminada")
         window.location.reload();
       }
