@@ -18,10 +18,14 @@ export class CreateSkillComponent {
   createSkill() {
     const skill = new Skill(this.skill, this.percentage, this.personId)
     this.skillService.save(skill).subscribe(data => {
+      if (data === 'BAD_REQUEST') {
+        alert("Faltan Campos");
+        throw new Error("Faltan Campos");
+      }
       alert("Habilidad Añadida");
       window.location.reload();
     }, err => {
       alert("Fallo la creacion de la habilidad");
     })
-  } 
+  }
 }

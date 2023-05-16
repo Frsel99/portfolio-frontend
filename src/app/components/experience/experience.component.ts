@@ -52,7 +52,7 @@ export class ExperienceComponent implements OnInit {
     this.editId = id;
     this.form = exp;
   }
-  
+
   cancelEditMode() {
     this.editId = 0;
   }
@@ -67,6 +67,10 @@ export class ExperienceComponent implements OnInit {
     const experience = new Experience(this.form.job, this.form.period, this.form.description, this.form.company, this.form.personId)
     experience.id = id;
     this.experienceService.update(experience).subscribe(data => {
+      if (data === 'BAD_REQUEST') {
+        alert("Faltan Campos");
+        throw new Error("Faltan Campos");
+      }
       alert("Experiencia Actualizada");
       const index = this.experiences.findIndex(exp => exp.id === id)
       this.experiences[index] = experience;
@@ -78,7 +82,7 @@ export class ExperienceComponent implements OnInit {
 
   deleteExperience(id: number | undefined) {
     this.experienceService.delete(id).subscribe(data => {
-      if(data === "OK") {
+      if (data === "OK") {
         alert("Experiencia Eliminada")
         window.location.reload();
       }

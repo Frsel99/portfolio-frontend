@@ -20,10 +20,14 @@ export class CreateEducationComponent {
   createEducation() {
     const education = new Education(this.study, this.period, this.description, this.institution, this.personId)
     this.educationService.save(education).subscribe(data => {
+      if (data === 'BAD_REQUEST') {
+        alert("Faltan Campos");
+        throw new Error("Faltan Campos");
+      }
       alert("Educacion Añadida");
       window.location.reload();
     }, err => {
       alert("Fallo la creacion de la educacion");
     })
-  } 
+  }
 }

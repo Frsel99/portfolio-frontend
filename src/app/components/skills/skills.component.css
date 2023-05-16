@@ -1,3 +1,7 @@
+.container {
+  margin-top: 2rem;
+}
+
 circle-progress {
   font-family: var(--titles-font);
   width: fit-content;
@@ -143,6 +147,11 @@ form img:hover {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
+}
+
+.skill-circle-wr {
+  width: 70%;
+  margin: auto;
 }
 
 @media screen and (max-width: 1200px) {

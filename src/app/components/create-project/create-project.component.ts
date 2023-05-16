@@ -24,6 +24,10 @@ export class CreateProjectComponent {
   createProject() {
     const project = new Project(this.project, this.period, this.description, this.images, this.personId);
     this.projectService.save(project).subscribe(data => {
+      if (data === 'BAD_REQUEST') {
+        alert("Faltan Campos");
+        throw new Error("Faltan Campos");
+      }
       alert("Proyecto Añadido");
       window.location.reload();
     }, err => {
