@@ -243,6 +243,7 @@ img {
     width: 100%;
     text-align: center;
     margin-top: 1rem;
+    margin-bottom: 4rem;
     height: fit-content;
   }
 
@@ -285,6 +286,11 @@ img {
     margin-left: 0.75rem;
   }
 
+  .profile-pic img {
+    width: 10rem;
+    height: 10rem;
+  }
+
   .personal-data-wr {
     margin-top: 3rem;
     margin-left: 0.85rem;
@@ -293,5 +299,9 @@ img {
   .description {
     margin-left: 1.2rem;
     font-size: 0.9rem;
+  }
+
+  .img-main-wr {
+    margin-bottom: 1rem;
   }
 }
